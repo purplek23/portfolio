@@ -342,13 +342,13 @@ code, pre, .mono {
 
 /* ── Print Styles ── */
 @media print {
-  @page { margin: 0.75in; }
+  @page { margin: 0.4in; }
   
   body {
     background: white !important;
     color: black !important;
-    font-size: 11pt !important;
-    line-height: 1.4 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.25 !important;
     font-family: Arial, Helvetica, sans-serif !important;
   }
   
@@ -368,35 +368,35 @@ code, pre, .mono {
   }
 
   /* Standardize Headings */
-  h1 { font-size: 24pt !important; margin-bottom: 4px !important; text-align: left !important; }
-  h2 { font-size: 14pt !important; border-bottom: 1px solid black !important; margin-bottom: 12px !important; padding-bottom: 4px !important; padding-top: 16px !important; }
-  h3 { font-size: 12pt !important; font-weight: bold !important; margin-bottom: 2px !important; }
+  h1 { font-size: 18pt !important; margin-bottom: 2px !important; text-align: left !important; }
+  h2 { font-size: 12pt !important; border-bottom: 1px solid black !important; margin-bottom: 6px !important; padding-bottom: 2px !important; padding-top: 8px !important; }
+  h3 { font-size: 10.5pt !important; font-weight: bold !important; margin-bottom: 2px !important; }
 
   /* Hero Section */
   #hero {
     min-height: auto !important;
     padding: 0 !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 12px !important;
     text-align: left !important;
   }
   #hero > div { text-align: left !important; }
   #hero h1 { text-align: left !important; }
-  #hero p { max-width: none !important; margin: 0 0 12px 0 !important; }
+  #hero p { max-width: none !important; margin: 0 0 4px 0 !important; }
   
   /* Stats row in hero */
   #hero .animate-fade-in-up.delay-400 {
     justify-content: flex-start !important;
-    gap: 24px !important;
-    margin-top: 12px !important;
+    gap: 16px !important;
+    margin-top: 4px !important;
   }
   #hero .animate-fade-in-up.delay-400 > div {
     text-align: left !important;
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 4px;
   }
-  #hero .animate-fade-in-up.delay-400 > div > div:first-child { font-size: 11pt !important; font-weight: bold !important; }
-  #hero .animate-fade-in-up.delay-400 > div > div:last-child { font-size: 11pt !important; }
+  #hero .animate-fade-in-up.delay-400 > div > div:first-child { font-size: 9.5pt !important; font-weight: bold !important; }
+  #hero .animate-fade-in-up.delay-400 > div > div:last-child { font-size: 9.5pt !important; }
 
   /* Sections */
   .section {
@@ -412,9 +412,9 @@ code, pre, .mono {
     display: block !important;
   }
   #about .card {
-    border: none !important; padding: 0 !important; margin-bottom: 8px !important;
+    border: none !important; padding: 0 !important; margin-bottom: 4px !important;
   }
-  #about .card h3 { display: inline !important; font-size: 11pt !important; }
+  #about .card h3 { display: inline !important; font-size: 9.5pt !important; }
   #about .card h3::after { content: ": "; }
   #about .card p { display: inline !important; }
 
@@ -424,34 +424,35 @@ code, pre, .mono {
     background: transparent !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 8px !important;
     break-inside: avoid;
   }
   
   /* Timeline specific */
-  #timeline { padding-left: 0 !important; margin-top: 12px !important; }
-  .timeline-item { margin-bottom: 16px !important; }
+  #timeline { padding-left: 0 !important; margin-top: 6px !important; }
+  .timeline-item { margin-bottom: 8px !important; }
+  .timeline-item ul { margin-bottom: 4px !important; gap: 4px !important; }
   
   /* Skills Panel */
   #skills-panels-container > div {
     display: block !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 6px !important;
   }
   .print-only-category-header {
     display: block !important;
-    font-size: 11pt !important;
+    font-size: 10pt !important;
     font-weight: bold !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
   }
   [role="tabpanel"] {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 8px !important;
+    gap: 4px !important;
   }
   [role="tabpanel"] > div {
     display: inline-flex !important;
     align-items: center !important;
-    margin-right: 12px !important;
+    margin-right: 8px !important;
   }
   [role="tabpanel"] > div > div:first-child > span:first-child::after { content: " (" }
   [role="tabpanel"] > div > div:first-child > span:last-child::after { content: ")," }
