@@ -13,7 +13,7 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     icon: '🚀',
     achievements: [
       'Led a team of <strong>~8 engineers</strong> across fast-paced delivery initiatives on the Rapid Application Delivery team.',
-      'Architected and shipped <strong>Leadpro Agent</strong> — the org\'s <em>first custom AI agent in production</em>, pioneering MCP servers, Kong gateway integration, web search grounding, and full agentic workflows.',
+      'Architected, released, and actively managed <strong>Leadpro Agent</strong> in production — navigating the unique operational challenges of deploying custom AI agents, including MCP server orchestration, Kong gateway integration, and web search grounding.',
       'Driving an org-wide initiative to standardize <strong>AI-native development workflows</strong> across all engineering teams (rollout ongoing).',
       'Spearheaded a <strong>Technical Vision initiative</strong> for an internal platform, aligning Product Owners and engineers around a shared, strategic roadmap.',
     ],
