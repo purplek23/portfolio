@@ -145,6 +145,12 @@ export default function HomePage() {
               <a href="#skills" className="btn-ghost" id="cta-skills">
                 <span>Explore Skills</span>
               </a>
+              <button onClick={() => window.print()} className="btn-ghost" id="cta-resume" style={{ fontFamily: 'inherit' }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                <span>Download PDF</span>
+              </button>
             </div>
 
             {/* Stats row */}
@@ -188,6 +194,7 @@ export default function HomePage() {
 
           {/* Scroll indicator */}
           <div
+            id="scroll-indicator"
             style={{
               position: 'absolute',
               bottom: '32px',

@@ -339,3 +339,56 @@ code, pre, .mono {
   background-size: 200% 100%;
   animation: shimmer 2s linear infinite;
 }
+
+/* ── Print Styles ── */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  header, footer, #contact, .hero-orb, .glow-orb, .bg-grid, .btn-primary, .btn-ghost, #scroll-indicator {
+    display: none !important;
+  }
+  
+  #hero {
+    min-height: auto !important;
+    padding: 40px 0 20px 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .section {
+    padding: 20px 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .card {
+    border: 1px solid #ccc !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 16px !important;
+    margin-bottom: 16px !important;
+    break-inside: avoid;
+  }
+
+  .badge {
+    border: 1px solid #999 !important;
+    color: #333 !important;
+    background: transparent !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .gradient-text {
+    background: none !important;
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+  
+  * {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
