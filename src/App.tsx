@@ -127,7 +127,7 @@ export default function HomePage() {
               }}
             >
               Tech Lead & Engineering Manager with 8+ years building software that matters.
-              I led the <strong style={{ color: 'var(--text-primary)' }}>first production AI agent</strong> at ALSAC and am
+              I <strong style={{ color: 'var(--text-primary)' }}>architected and actively manage a production AI agent</strong> at ALSAC and am
               passionate about AI-native development, team empowerment, and technical vision.
             </p>
 
@@ -161,7 +161,7 @@ export default function HomePage() {
               {[
                 { value: '8+', label: 'Years Experience', id: 'stat-years' },
                 { value: '~8', label: 'Engineers Led', id: 'stat-team' },
-                { value: '1st', label: 'Prod AI Agent', id: 'stat-agent' },
+                { value: '1', label: 'Prod Agent Managed', id: 'stat-agent' },
                 { value: '90%', label: 'NLP Accuracy', id: 'stat-nlp' },
               ].map((stat) => (
                 <div key={stat.id} id={stat.id} style={{ textAlign: 'center' }}>
@@ -323,7 +323,7 @@ export default function HomePage() {
               Work <span className="gradient-text">History</span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '56px', maxWidth: '520px' }}>
-              8+ years of shipping great software — from NLP pipelines and event platforms to the org&apos;s first production AI agent.
+              8+ years of shipping great software — from NLP pipelines and event platforms to orchestrating and managing a live production AI agent.
             </p>
 
             <Timeline entries={TIMELINE_DATA} />
