@@ -293,7 +293,7 @@ export default function HomePage() {
                   flexWrap: 'wrap',
                 }}
               >
-                <span style={{ fontSize: '24px' }}>🎓</span>
+                <span style={{ fontSize: '24px' }}></span>
                 <div>
                   <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
                     B.S. Computer Science
@@ -317,7 +317,7 @@ export default function HomePage() {
                   flexWrap: 'wrap',
                 }}
               >
-                <span style={{ fontSize: '24px' }}>☁️</span>
+                <span style={{ fontSize: '24px' }}></span>
                 <div>
                   <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
                     AWS Certified Generative AI Practitioner

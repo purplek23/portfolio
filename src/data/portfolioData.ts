@@ -10,7 +10,7 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     duration: '1–2 yrs',
     dateRange: '2024 – Present',
     accentColor: '#3b82f6',
-    icon: '🚀',
+    icon: '',
     achievements: [
       'Led a team of <strong>~8 engineers</strong> across fast-paced delivery initiatives on the Rapid Application Delivery team.',
       'Architected and delivered <strong>Leadpro Agent</strong> to production — navigating the unique operational challenges of deploying custom AI agents (MCP orchestration, Kong integration), before successfully handing it off for long-term maintenance.',
@@ -27,7 +27,7 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     duration: '1–2 yrs',
     dateRange: '2022 – 2024',
     accentColor: '#8b5cf6',
-    icon: '🗓️',
+    icon: '',
     achievements: [
       'Led development of a new <strong>Event Management Portal</strong> that fully replaced an aging legacy system, praised by the business for its ease of use and modern design.',
       'The portal integrates with third-party event platforms and now powers the management of <strong>thousands of events per year</strong>.',
@@ -43,7 +43,7 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     duration: '1–2 yrs',
     dateRange: '2020 – 2022',
     accentColor: '#06b6d4',
-    icon: '🤖',
+    icon: '',
     achievements: [
       'Built an end-to-end <strong>NLP data pipeline</strong> ingesting newspaper articles, extracting named entities and relationships via <strong>Amazon Comprehend</strong>, and matching them to the organization\'s CRM.',
       'Managed all data preparation, cleaning, and model training — achieving <strong>90% accuracy</strong> on name and relationship extraction.',
@@ -57,7 +57,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   {
     id: 'leadership',
     label: 'Leadership',
-    icon: '👥',
+    icon: '',
     accentColor: '#3b82f6',
     skills: [
       { name: 'Team Leadership & Mentoring', level: 95, yearsLabel: '4+ yrs' },
@@ -70,7 +70,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   {
     id: 'ai',
     label: 'AI & ML',
-    icon: '🤖',
+    icon: '',
     accentColor: '#8b5cf6',
     skills: [
       { name: 'Agentic AI & LLM Workflows', level: 92, yearsLabel: '2+ yrs' },
@@ -83,7 +83,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   {
     id: 'frontend',
     label: 'Frontend',
-    icon: '🎨',
+    icon: '',
     accentColor: '#06b6d4',
     skills: [
       { name: 'TypeScript', level: 92, yearsLabel: '5+ yrs' },
@@ -96,7 +96,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   {
     id: 'backend',
     label: 'Backend & Cloud',
-    icon: '⚙️',
+    icon: '',
     accentColor: '#10b981',
     skills: [
       { name: 'C# / .NET', level: 85, yearsLabel: '5+ yrs' },
@@ -111,21 +111,21 @@ export const SKILLS_DATA: SkillCategory[] = [
 export const CORE_VALUES = [
   {
     id: 'ai-first',
-    icon: '🤖',
+    icon: '',
     title: 'AI-First Mindset',
     description: 'I don\'t just use AI as a tool — I architect systems around it and lead teams to build natively with it.',
     color: '#8b5cf6',
   },
   {
     id: 'delivery',
-    icon: '🚀',
+    icon: '',
     title: 'Delivery Focused',
     description: 'From RAD team sprints to multi-year platform migrations, I optimize for shipping high-quality software quickly.',
     color: '#3b82f6',
   },
   {
     id: 'people',
-    icon: '👥',
+    icon: '',
     title: 'People First',
     description: 'Great software is built by empowered engineers. I invest in mentoring, culture, and clear technical vision.',
     color: '#10b981',
