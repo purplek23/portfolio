@@ -90,90 +90,99 @@ export default function TechStackVisualizer({ categories }: TechStackVisualizerP
       </div>
 
       {/* Skills panel */}
-      {active && (
-        <div
-          id={`panel-${active.id}`}
-          role="tabpanel"
-          aria-labelledby={`tab-${active.id}`}
-          className="card"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '24px',
-          }}
-        >
-          {active.skills?.map((skill, i) => (
-            <div key={skill.name} id={`skill-${skill.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
-              {/* Label row */}
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  marginBottom: '8px',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '13px',
-                    fontWeight: 500,
-                    color: 'var(--text-primary)',
-                  }}
-                >
-                  {skill.name}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '11px',
-                    color: 'var(--text-muted)',
-                  }}
-                >
-                  {skill.yearsLabel}
-                </span>
-              </div>
-
-              {/* Bar background */}
-              <div
-                style={{
-                  height: '4px',
-                  borderRadius: '2px',
-                  background: 'var(--border)',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  className="skill-bar-fill"
-                  style={{
-                    height: '100%',
-                    width: animated ? `${skill.level}%` : '0%',
-                    background: `linear-gradient(90deg, ${active!.accentColor}, ${active!.accentColor}99)`,
-                    transitionDelay: `${i * 0.05}s`,
-                  }}
-                />
-              </div>
-
-              {/* Level dots */}
-              <div style={{ display: 'flex', gap: '4px', marginTop: '6px' }}>
-                {[20, 40, 60, 80, 100].map((threshold) => (
+      <div id="skills-panels-container">
+        {categories.map((cat) => {
+          const isActive = cat.id === activeCategory;
+          return (
+            <div
+              key={cat.id}
+              id={`panel-${cat.id}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${cat.id}`}
+              className="card skill-panel"
+              style={{
+                display: isActive ? 'grid' : 'none',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                gap: '24px',
+              }}
+            >
+              {/* Category Header (Only visible in print) */}
+              <h3 className="print-only-category-header" style={{ display: 'none' }}>{cat.label}</h3>
+              {cat.skills?.map((skill, i) => (
+                <div key={skill.name} id={`skill-${skill.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
+                  {/* Label row */}
                   <div
-                    key={threshold}
                     style={{
-                      width: '6px',
-                      height: '6px',
-                      borderRadius: '50%',
-                      background: skill.level >= threshold ? active!.accentColor : 'var(--border)',
-                      transition: 'background 0.3s ease',
-                      transitionDelay: `${0.3 + threshold / 100}s`,
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      marginBottom: '8px',
                     }}
-                  />
-                ))}
-              </div>
+                  >
+                    <span
+                      style={{
+                        fontFamily: "'JetBrains Mono', monospace",
+                        fontSize: '13px',
+                        fontWeight: 500,
+                        color: 'var(--text-primary)',
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "'JetBrains Mono', monospace",
+                        fontSize: '11px',
+                        color: 'var(--text-muted)',
+                      }}
+                    >
+                      {skill.yearsLabel}
+                    </span>
+                  </div>
+
+                  {/* Bar background */}
+                  <div
+                    className="skill-bar-bg"
+                    style={{
+                      height: '4px',
+                      borderRadius: '2px',
+                      background: 'var(--border)',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <div
+                      className="skill-bar-fill"
+                      style={{
+                        height: '100%',
+                        width: animated && isActive ? `${skill.level}%` : '0%',
+                        background: `linear-gradient(90deg, ${cat.accentColor}, ${cat.accentColor}99)`,
+                        transitionDelay: `${i * 0.05}s`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Level dots */}
+                  <div className="skill-level-dots" style={{ display: 'flex', gap: '4px', marginTop: '6px' }}>
+                    {[20, 40, 60, 80, 100].map((threshold) => (
+                      <div
+                        key={threshold}
+                        style={{
+                          width: '6px',
+                          height: '6px',
+                          borderRadius: '50%',
+                          background: skill.level >= threshold ? cat.accentColor : 'var(--border)',
+                          transition: 'background 0.3s ease',
+                          transitionDelay: `${0.3 + threshold / 100}s`,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      )}
+          );
+        })}
+      </div>
     </div>
   );
 }
