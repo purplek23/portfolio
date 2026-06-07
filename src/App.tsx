@@ -126,7 +126,7 @@ export default function HomePage() {
                 lineHeight: 1.7,
               }}
             >
-              Tech Lead & Engineering Manager with 8+ years building software that matters.
+              Tech Lead with 8+ years building software that matters.
               I <strong style={{ color: 'var(--text-primary)' }}>architected and delivered a production AI agent</strong> at ALSAC and am
               passionate about AI-native development, team empowerment, and technical vision.
             </p>
@@ -235,7 +235,7 @@ export default function HomePage() {
               <span className="gradient-text">AI at the core</span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '16px', maxWidth: '640px', marginBottom: '56px', lineHeight: 1.8 }}>
-              I&apos;m a Tech Lead and Engineering Manager who believes the next generation of software is built
+              I&apos;m a Tech Lead who believes the next generation of software is built
               with intelligent, agentic systems. I&apos;ve spent 8+ years shipping production software and
               leading teams — and the last 2 years going all-in on AI-native development.
             </p>
