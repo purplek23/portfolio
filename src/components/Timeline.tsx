@@ -45,10 +45,7 @@ export default function Timeline({ entries }: TimelineProps) {
   }, []);
 
   return (
-    <div id="timeline" style={{ position: 'relative', paddingLeft: '48px' }}>
-      {/* Vertical line */}
-      <div className="timeline-line" />
-
+    <div id="timeline" style={{ position: 'relative' }}>
       {entries.map((entry, i) => (
         <div
           key={entry.id}
@@ -64,16 +61,6 @@ export default function Timeline({ entries }: TimelineProps) {
             transitionDelay: `${i * 0.1}s`,
           }}
         >
-          {/* Dot */}
-          <div
-            className="timeline-dot"
-            style={{
-              top: '28px',
-              borderColor: entry.accentColor,
-              boxShadow: `0 0 12px ${entry.accentColor}66`,
-            }}
-          />
-
           {/* Card */}
           <div className="card" style={{ cursor: 'default' }}>
             {/* Header row */}
@@ -88,8 +75,7 @@ export default function Timeline({ entries }: TimelineProps) {
               }}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-                  <span style={{ fontSize: '22px' }}>{entry.icon}</span>
+                <div style={{ marginBottom: '6px' }}>
                   <h3
                     style={{
                       fontFamily: "'Space Grotesk', sans-serif",

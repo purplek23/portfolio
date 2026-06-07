@@ -255,22 +255,6 @@ export default function HomePage() {
                   className="card animate-fade-in-up"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
-                  <div
-                    style={{
-                      width: '48px',
-                      height: '48px',
-                      borderRadius: '12px',
-                      background: `${val.color}18`,
-                      border: `1px solid ${val.color}33`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '22px',
-                      marginBottom: '16px',
-                    }}
-                  >
-                    {val.icon}
-                  </div>
                   <h3 style={{ marginBottom: '10px', fontSize: '18px', color: val.color }}>{val.title}</h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.7 }}>
                     {val.description}

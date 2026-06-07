@@ -83,7 +83,6 @@ export default function TechStackVisualizer({ categories }: TechStackVisualizerP
                 transition: 'all 0.2s ease',
               }}
             >
-              <span>{cat.icon}</span>
               {cat.label}
             </button>
           );
