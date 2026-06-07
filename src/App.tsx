@@ -191,8 +191,7 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               bottom: '32px',
-              left: '50%',
-              transform: 'translateX(-50%)',
+              right: '32px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
