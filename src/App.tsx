@@ -3,11 +3,16 @@ import Footer from '@/components/Footer';
 import Timeline from '@/components/Timeline';
 import TechStackVisualizer from '@/components/TechStackVisualizer';
 import { TIMELINE_DATA, SKILLS_DATA, CORE_VALUES } from '@/data/portfolioData';
+import PrintResume from '@/components/PrintResume';
 
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <div className="print-only">
+        <PrintResume />
+      </div>
+      <div className="screen-only">
+        <Header />
 
       <main id="main-content">
         {/* ── HERO ── */}
@@ -431,6 +436,7 @@ export default function HomePage() {
       </main>
 
       <Footer />
+      </div>
 
       <style>{`
         @keyframes pulse {
