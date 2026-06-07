@@ -160,9 +160,9 @@ export default function HomePage() {
             >
               {[
                 { value: '8+', label: 'Years Experience', id: 'stat-years' },
-                { value: '~8', label: 'Engineers Led', id: 'stat-team' },
-                { value: '1', label: 'Prod Agent Delivered', id: 'stat-agent' },
-                { value: '90%', label: 'NLP Accuracy', id: 'stat-nlp' },
+                { value: '8', label: 'Engineers Led', id: 'stat-team' },
+                { value: '3+', label: 'Enterprise Platforms', id: 'stat-platforms' },
+                { value: '2+', label: 'Years AI Experience', id: 'stat-ai' },
               ].map((stat) => (
                 <div key={stat.id} id={stat.id} style={{ textAlign: 'center' }}>
                   <div
