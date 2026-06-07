@@ -279,31 +279,55 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Cert bar */}
-            <div
-              id="cert-bar"
-              style={{
-                marginTop: '40px',
-                padding: '20px 24px',
-                borderRadius: '12px',
-                background: 'rgba(245, 158, 11, 0.05)',
-                border: '1px solid rgba(245, 158, 11, 0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                flexWrap: 'wrap',
-              }}
-            >
-              <span style={{ fontSize: '24px' }}>🎓</span>
-              <div>
-                <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
-                  B.S. Computer Science — Texas State University
+            {/* Education & Certs */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '40px' }}>
+              <div
+                style={{
+                  padding: '16px 24px',
+                  borderRadius: '12px',
+                  background: 'rgba(59, 130, 246, 0.05)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <span style={{ fontSize: '24px' }}>🎓</span>
+                <div>
+                  <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
+                    B.S. Computer Science
+                  </div>
+                  <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
+                    Texas State University
+                  </div>
                 </div>
-                <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
-                  Currently pursuing: <span style={{ color: '#fbbf24' }}>AWS Certified Generative AI Practitioner</span>
-                </div>
+                <span className="badge" style={{ marginLeft: 'auto', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', border: '1px solid rgba(59, 130, 246, 0.2)' }}>Completed</span>
               </div>
-              <span className="badge badge-orange" style={{ marginLeft: 'auto' }}>In Progress</span>
+
+              <div
+                style={{
+                  padding: '16px 24px',
+                  borderRadius: '12px',
+                  background: 'rgba(245, 158, 11, 0.05)',
+                  border: '1px solid rgba(245, 158, 11, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <span style={{ fontSize: '24px' }}>☁️</span>
+                <div>
+                  <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
+                    AWS Certified Generative AI Practitioner
+                  </div>
+                  <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
+                    Amazon Web Services
+                  </div>
+                </div>
+                <span className="badge badge-orange" style={{ marginLeft: 'auto' }}>In Progress</span>
+              </div>
             </div>
           </div>
         </section>
