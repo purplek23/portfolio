@@ -4,7 +4,7 @@ import type { SkillCategory } from '@/components/TechStackVisualizer';
 export const PERSON_DATA = {
   name: 'Travis Kovar',
   headline: 'Staff Software Engineer | AI & Enterprise Architecture',
-  email: 'travis@example.com',
+  email: 'kovartravis@gmail.com',
   linkedin: 'linkedin.com/in/traviskovar',
   github: 'github.com/purplek23',
   summary: 'Staff Software Engineer with 8+ years of experience defining technical strategy, architecting high-scale enterprise platforms, and leading cross-functional teams. Proven track record of delivering production-grade AI agents, standardizing team-level AI-native developer workflows to establish organizational blueprints, and aligning engineering execution with business roadmaps.',
