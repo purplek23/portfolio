@@ -379,7 +379,7 @@ export default function HomePage() {
               style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}
             >
               <a
-                href="mailto:travis@example.com"
+                href={`mailto:${PERSON_DATA.email}`}
                 id="contact-email"
                 className="btn-primary"
                 style={{ fontSize: '14px' }}
@@ -391,7 +391,7 @@ export default function HomePage() {
                 <span>Send an Email</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href={`https://${PERSON_DATA.linkedin}`}
                 id="contact-linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -404,7 +404,7 @@ export default function HomePage() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com"
+                href={`https://${PERSON_DATA.github}`}
                 id="contact-github"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -6,7 +6,7 @@ export const PERSON_DATA = {
   headline: 'Staff Software Engineer | AI & Enterprise Architecture',
   email: 'travis@example.com',
   linkedin: 'linkedin.com/in/traviskovar',
-  github: 'github.com/traviskovar',
+  github: 'github.com/purplek23',
   summary: 'Staff Software Engineer with 8+ years of experience defining technical strategy, architecting high-scale enterprise platforms, and leading cross-functional teams. Proven track record of delivering production-grade AI agents, standardizing team-level AI-native developer workflows to establish organizational blueprints, and aligning engineering execution with business roadmaps.',
   availability: 'Available for Staff Engineering & Leadership Roles',
   aboutMe: "I'm a Staff Software Engineer who believes the next generation of software is built with intelligent, agentic systems. I've spent 8+ years architecting enterprise platforms and leading technical strategy — and the last 2 years going all-in on AI-native engineering and developer enablement.",
