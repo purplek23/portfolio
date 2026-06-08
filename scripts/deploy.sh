@@ -13,7 +13,7 @@ echo "Building production assets..."
 yarn build
 
 TEMP_DIR=$(mktemp -d)
-TARGET_REPO="github.com/purplek23/travisk23.github.io.git"
+TARGET_REPO="github.com/purplek23/travisk.git"
 SOURCE_COMMIT_SHA=$(git rev-parse --short HEAD)
 
 echo "Cloning target repository..."

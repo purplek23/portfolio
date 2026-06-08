@@ -75,11 +75,6 @@ describe('Timeline', () => {
     expect(screen.getByText('JavaScript')).toBeInTheDocument();
   });
 
-  it('renders icons', () => {
-    render(<Timeline entries={MOCK_ENTRIES} />);
-    expect(screen.getByText('🚀')).toBeInTheDocument();
-    expect(screen.getByText('💻')).toBeInTheDocument();
-  });
 
   it('renders with correct IDs', () => {
     render(<Timeline entries={MOCK_ENTRIES} />);

@@ -22,7 +22,6 @@ describe('Footer', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
     expect(document.getElementById('footer-links')).toBeInTheDocument();
     expect(document.getElementById('footer-github')).toBeInTheDocument();
-    expect(document.getElementById('footer-linkedin')).toBeInTheDocument();
     expect(document.getElementById('footer-email')).toBeInTheDocument();
   });
 

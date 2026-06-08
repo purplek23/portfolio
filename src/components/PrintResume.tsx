@@ -10,7 +10,7 @@ export default function PrintResume() {
           {PERSON_DATA.headline}
         </div>
         <div style={{ fontSize: '10pt', marginTop: '4px' }}>
-          {PERSON_DATA.email} • {PERSON_DATA.linkedin} • {PERSON_DATA.github}
+          <strong>{PERSON_DATA.website}</strong> • {PERSON_DATA.email} • {PERSON_DATA.github}
         </div>
       </div>
 

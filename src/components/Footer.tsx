@@ -70,7 +70,7 @@ export default function Footer() {
           id="footer-links"
           style={{ display: 'flex', gap: '24px' }}
         >
-          {(['GitHub', 'LinkedIn', 'Email'] as const).map((label) => (
+          {(['GitHub', 'Email'] as const).map((label) => (
             <a
               key={label}
               href="#contact"
