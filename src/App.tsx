@@ -175,7 +175,7 @@ export default function HomePage() {
             >
               {[
                 { value: '9+', label: 'Years Experience', id: 'stat-years' },
-                { value: '8', label: 'Engineers Led', id: 'stat-team' },
+                { value: 'RAD Lead', label: '8 Engineers Led', id: 'stat-team' },
                 { value: '3+', label: 'Enterprise Platforms', id: 'stat-platforms' },
                 { value: '2+', label: 'Years AI Experience', id: 'stat-ai' },
               ].map((stat) => (
