@@ -103,7 +103,7 @@ export default function HomePage() {
                   animation: 'pulse 2s ease-in-out infinite',
                 }}
               />
-              Available for Senior Engineering Leadership Roles
+              Available for {PERSON_DATA.availability || 'Staff Engineering & Leadership Roles'}
             </div>
 
             {/* Heading */}
@@ -114,9 +114,15 @@ export default function HomePage() {
             >
               <span style={{ color: 'var(--text-primary)' }}>{PERSON_DATA.name}</span>
               <br />
-              <span className="gradient-text">AI Driven Technical</span>
-              <br />
-              <span className="gradient-text">Leadership</span>
+              <span className="gradient-text">{PERSON_DATA.headline.split('|')[0]?.trim()}</span>
+              {PERSON_DATA.headline.split('|')[1] && (
+                <>
+                  <br />
+                  <span className="gradient-text" style={{ fontSize: '0.75em', opacity: 0.9 }}>
+                    {PERSON_DATA.headline.split('|')[1]?.trim()}
+                  </span>
+                </>
+              )}
             </h1>
 
             {/* Sub-headline */}
@@ -124,16 +130,14 @@ export default function HomePage() {
               id="hero-tagline"
               className="animate-fade-in-up delay-200"
               style={{
-                fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+                fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)',
                 color: 'var(--text-secondary)',
-                maxWidth: '580px',
+                maxWidth: '680px',
                 margin: '0 auto 36px',
-                lineHeight: 1.7,
+                lineHeight: 1.75,
               }}
             >
-              Tech Lead with 8+ years building software that matters.
-              I <strong style={{ color: 'var(--text-primary)' }}>architected and delivered a production AI agent</strong> at ALSAC and am
-              passionate about AI-native development, team empowerment, and technical vision.
+              {PERSON_DATA.summary}
             </p>
 
             {/* CTA buttons */}
@@ -246,10 +250,8 @@ export default function HomePage() {
               Building the future with{' '}
               <span className="gradient-text">AI at the core</span>
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '16px', maxWidth: '640px', marginBottom: '56px', lineHeight: 1.8 }}>
-              I&apos;m a Tech Lead who believes the next generation of software is built
-              with intelligent, agentic systems. I&apos;ve spent 8+ years shipping production software and
-              leading teams — and the last 2 years going all-in on AI-native development.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '16px', maxWidth: '680px', marginBottom: '56px', lineHeight: 1.8 }}>
+              {PERSON_DATA.aboutMe}
             </p>
 
             {/* Value cards */}
@@ -326,7 +328,7 @@ export default function HomePage() {
               Work <span className="gradient-text">History</span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '56px', maxWidth: '520px' }}>
-              8+ years of shipping great software — from NLP pipelines and event platforms to architecting and delivering a live production AI agent.
+              A proven trajectory of building scalable systems, standardizing dev workflows, and deploying high-impact AI agents.
             </p>
 
             <Timeline entries={TIMELINE_DATA} />
@@ -369,8 +371,7 @@ export default function HomePage() {
               Let&apos;s <span className="gradient-text">work together</span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', lineHeight: 1.8 }}>
-              I&apos;m currently open to senior engineering leadership opportunities. If you&apos;re building something
-              ambitious — especially in the AI space — I&apos;d love to connect.
+              {PERSON_DATA.contactText}
             </p>
 
             <div

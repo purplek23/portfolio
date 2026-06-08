@@ -3,11 +3,14 @@ import type { SkillCategory } from '@/components/TechStackVisualizer';
 
 export const PERSON_DATA = {
   name: 'Travis Kovar',
-  headline: 'Tech Lead | AI Driven Technical Leadership',
+  headline: 'Staff Software Engineer | AI & Enterprise Architecture',
   email: 'travis@example.com',
   linkedin: 'linkedin.com/in/traviskovar',
   github: 'github.com/traviskovar',
-  summary: 'Tech Lead with 8+ years of experience building scalable enterprise software. Architected and delivered a live production AI agent at ALSAC — passionate about AI-native development, team empowerment, and driving technical vision.',
+  summary: 'Staff Software Engineer with 8+ years of experience defining technical strategy, architecting high-scale enterprise platforms, and leading cross-functional teams. Proven track record of delivering production-grade AI agents, standardizing team-level AI-native developer workflows to establish organizational blueprints, and aligning engineering execution with business roadmaps.',
+  availability: 'Available for Staff Engineering & Leadership Roles',
+  aboutMe: "I'm a Staff Software Engineer who believes the next generation of software is built with intelligent, agentic systems. I've spent 8+ years architecting enterprise platforms and leading technical strategy — and the last 2 years going all-in on AI-native engineering and developer enablement.",
+  contactText: "I'm currently open to Staff Software Engineer and technical leadership opportunities. If you're building something ambitious — especially in the AI space — I'd love to connect.",
   education: [
     { degree: 'B.S. Computer Science', institution: 'Texas State University', status: 'Completed' as const },
     { degree: 'AWS Certified Generative AI Practitioner', institution: 'Amazon Web Services', status: 'In Progress' as const },
@@ -17,7 +20,7 @@ export const PERSON_DATA = {
 export const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 'rad-tech-lead',
-    title: 'Tech Lead — RAD Team',
+    title: 'Staff Software Engineer / Tech Lead — RAD Team',
     company: 'ALSAC',
     companyType: 'Non-Profit · St. Jude Children\'s Research Hospital',
     duration: '1–2 yrs',
@@ -25,10 +28,10 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     accentColor: '#3b82f6',
     icon: '',
     achievements: [
-      'Led a team of <strong>~8 engineers</strong> across fast-paced delivery initiatives on the Rapid Application Delivery team.',
-      'Architected and delivered <strong>Leadpro Agent</strong> to production — navigating the unique operational challenges of deploying custom AI agents (MCP orchestration, Kong integration), before successfully handing it off for long-term maintenance.',
-      'Driving an org-wide initiative to standardize <strong>AI-native development workflows</strong> across all engineering teams (rollout ongoing).',
-      'Spearheaded a <strong>Technical Vision initiative</strong> for an internal platform, aligning Product Owners and engineers around a shared, strategic roadmap.',
+      'Steered the technical strategy and mentored a high-performing team of <strong>~8 engineers</strong> across rapid application delivery initiatives, establishing engineering standards for accelerated product cycles.',
+      'Architected and deployed <strong>Leadpro Agent</strong> to production — establishing enterprise integration patterns for agentic AI (MCP orchestration, Kong API Gateway integration, OpenShift containerization) and successfully transitioning it to operations.',
+      'Pioneered the team\'s transition to <strong>AI-native developer workflows</strong>, standardizing secure AI-assistant toolchains to establish a high-productivity model for the broader organization.',
+      'Spearheaded the <strong>Technical Vision & Architecture Roadmap</strong> for an internal enterprise platform, aligning executive leadership, product owners, and engineering teams around a 3-year modernization strategy.'
     ],
     technologies: ['TypeScript', 'React', 'C# / .NET', 'AWS', 'OpenShift', 'Kubernetes', 'SQL Server', 'MCP'],
   },
@@ -42,9 +45,9 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     accentColor: '#8b5cf6',
     icon: '',
     achievements: [
-      'Led development of a new <strong>Event Management Portal</strong> that fully replaced an aging legacy system, praised by the business for its ease of use and modern design.',
-      'The portal integrates with third-party event platforms and now powers the management of <strong>thousands of events per year</strong>.',
-      'Received direct executive-level recognition for delivering an intuitive, high-quality product on schedule.',
+      'Designed the architecture and led development of a mission-critical <strong>Event Management Platform</strong> to replace a legacy system, improving usability, performance, and operational reliability.',
+      'Orchestrated secure integration layers with external APIs to support automated management of <strong>thousands of high-impact events annually</strong>.',
+      'Partnered directly with executive stakeholders and product leaders to define SLOs and ensure high-quality, on-schedule delivery.',
     ],
     technologies: ['TypeScript', 'React', 'C# / .NET', 'AWS', 'REST APIs', 'SQL Server'],
   },
@@ -58,9 +61,9 @@ export const TIMELINE_DATA: TimelineEntry[] = [
     accentColor: '#06b6d4',
     icon: '',
     achievements: [
-      'Built an end-to-end <strong>NLP data pipeline</strong> ingesting newspaper articles, extracting named entities and relationships via <strong>Amazon Comprehend</strong>, and matching them to the organization\'s CRM.',
-      'Managed all data preparation, cleaning, and model training — achieving <strong>90% accuracy</strong> on name and relationship extraction.',
-      'Delivered the full ETL infrastructure on AWS, from ingestion through entity resolution.',
+      'Architected an end-to-end, serverless <strong>NLP data ingestion & relationship mapping pipeline</strong> on AWS, leveraging <strong>Amazon Comprehend</strong> to enrich CRM profiles with 90% precision.',
+      'Engineered high-accuracy data preparation and entity extraction models, achieving <strong>90% precision</strong> on relationship matching.',
+      'Deployed scalable ETL and streaming data infrastructure on AWS, transitioning legacy processes into real-time processing.',
     ],
     technologies: ['Python', 'Amazon Comprehend', 'AWS', 'ETL / Data Pipelines', 'NLP / ML'],
   },
@@ -73,11 +76,11 @@ export const SKILLS_DATA: SkillCategory[] = [
     icon: '',
     accentColor: '#3b82f6',
     skills: [
-      { name: 'Team Leadership & Mentoring', level: 95, yearsLabel: '4+ yrs' },
-      { name: 'Technical Vision & Roadmapping', level: 90, yearsLabel: '3+ yrs' },
-      { name: 'Stakeholder Communication', level: 88, yearsLabel: '4+ yrs' },
-      { name: 'Agile / Scrum Facilitation', level: 85, yearsLabel: '5+ yrs' },
-      { name: 'Architecture Reviews', level: 82, yearsLabel: '3+ yrs' },
+      { name: 'Technical Strategy & Roadmaps', level: 95, yearsLabel: '4+ yrs' },
+      { name: 'System Architecture & Design', level: 92, yearsLabel: '5+ yrs' },
+      { name: 'Cross-Functional Strategy', level: 90, yearsLabel: '4+ yrs' },
+      { name: 'Developer Enablement & Workflows', level: 90, yearsLabel: '3+ yrs' },
+      { name: 'Mentorship & Engineering Culture', level: 95, yearsLabel: '4+ yrs' },
     ],
   },
   {
@@ -86,11 +89,11 @@ export const SKILLS_DATA: SkillCategory[] = [
     icon: '',
     accentColor: '#8b5cf6',
     skills: [
-      { name: 'Agentic AI & LLM Workflows', level: 92, yearsLabel: '2+ yrs' },
-      { name: 'MCP Server Design', level: 88, yearsLabel: '1+ yr' },
-      { name: 'Amazon Comprehend / NLP', level: 80, yearsLabel: '2+ yrs' },
-      { name: 'Model Training & Fine-tuning', level: 72, yearsLabel: '2+ yrs' },
-      { name: 'AI Native Development', level: 90, yearsLabel: '2+ yrs' },
+      { name: 'Agentic AI & LLM Integration', level: 92, yearsLabel: '2+ yrs' },
+      { name: 'MCP Server Architecture', level: 88, yearsLabel: '1+ yr' },
+      { name: 'NLP & Entity Resolution', level: 80, yearsLabel: '2+ yrs' },
+      { name: 'Model Optimization & Evaluation', level: 72, yearsLabel: '2+ yrs' },
+      { name: 'AI Native Development Tooling', level: 90, yearsLabel: '2+ yrs' },
     ],
   },
   {
@@ -113,10 +116,10 @@ export const SKILLS_DATA: SkillCategory[] = [
     accentColor: '#10b981',
     skills: [
       { name: 'C# / .NET', level: 85, yearsLabel: '5+ yrs' },
-      { name: 'AWS', level: 82, yearsLabel: '5+ yrs' },
-      { name: 'REST API Design', level: 88, yearsLabel: '6+ yrs' },
+      { name: 'AWS Cloud Services', level: 85, yearsLabel: '5+ yrs' },
+      { name: 'REST API Architecture', level: 88, yearsLabel: '6+ yrs' },
       { name: 'SQL Server', level: 80, yearsLabel: '5+ yrs' },
-      { name: 'OpenShift / Kubernetes', level: 72, yearsLabel: '2+ yrs' },
+      { name: 'Kubernetes / OpenShift', level: 72, yearsLabel: '2+ yrs' },
     ],
   },
 ];
@@ -125,22 +128,22 @@ export const CORE_VALUES = [
   {
     id: 'ai-first',
     icon: '',
-    title: 'AI-First Mindset',
-    description: 'I don\'t just use AI as a tool — I architect systems around it and lead teams to build natively with it.',
+    title: 'AI-First Architect',
+    description: 'I architect enterprise systems around agentic AI patterns, establishing standards for LLM integrations and orchestration.',
     color: '#8b5cf6',
   },
   {
     id: 'delivery',
     icon: '',
-    title: 'Delivery Focused',
-    description: 'From RAD team sprints to multi-year platform migrations, I optimize for shipping high-quality software quickly.',
+    title: 'Engineering Strategy',
+    description: 'I translate complex business objectives into scalable architecture, establishing design patterns and review processes.',
     color: '#3b82f6',
   },
   {
     id: 'people',
     icon: '',
-    title: 'People First',
-    description: 'Great software is built by empowered engineers. I invest in mentoring, culture, and clear technical vision.',
+    title: 'Mentorship & Growth',
+    description: 'Great software is built by aligned teams. I focus on mentoring senior talent and scaling developer workflows.',
     color: '#10b981',
   },
 ];
