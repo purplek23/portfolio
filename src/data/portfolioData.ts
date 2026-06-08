@@ -12,8 +12,7 @@ export const PERSON_DATA = {
   aboutMe: "I'm a Staff Software Engineer who believes the next generation of software is built with intelligent, agentic systems. I've spent 9+ years architecting enterprise platforms and leading technical strategy — and the last 2 years going all-in on AI-native engineering and developer enablement.",
   contactText: "I'm currently open to Staff Software Engineer and technical leadership opportunities. If you're building something ambitious — especially in the AI space — I'd love to connect.",
   education: [
-    { degree: 'B.S. Computer Science', institution: 'Texas State University', status: 'Completed' as const },
-    { degree: 'AWS Certified Generative AI Practitioner', institution: 'Amazon Web Services', status: 'In Progress' as const },
+    { degree: 'B.S. Computer Science', institution: 'Texas State University', status: 'Completed' as 'Completed' | 'In Progress' },
   ],
 };
 
