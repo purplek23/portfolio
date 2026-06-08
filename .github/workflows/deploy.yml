@@ -23,11 +23,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Debug secret
-        run: echo "Length of GH_PAT is ${#GH_PAT}"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-
       - name: Build and Deploy
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
