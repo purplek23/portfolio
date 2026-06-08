@@ -41,7 +41,6 @@ export default function TechStackVisualizer({ categories }: TechStackVisualizerP
     return () => clearTimeout(t);
   }, [activeCategory]);
 
-  const active = categories.find((c) => c.id === activeCategory) ?? categories[0];
 
   return (
     <div ref={containerRef} id="tech-stack-visualizer">

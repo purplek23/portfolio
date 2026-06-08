@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Timeline from '@/components/Timeline';
 import TechStackVisualizer from '@/components/TechStackVisualizer';
-import { TIMELINE_DATA, SKILLS_DATA, CORE_VALUES } from '@/data/portfolioData';
+import { TIMELINE_DATA, SKILLS_DATA, CORE_VALUES, PERSON_DATA } from '@/data/portfolioData';
 import PrintResume from '@/components/PrintResume';
 
 export default function HomePage() {
@@ -112,7 +112,7 @@ export default function HomePage() {
               className="animate-fade-in-up delay-100"
               style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', marginBottom: '20px', lineHeight: 1.1 }}
             >
-              <span style={{ color: 'var(--text-primary)' }}>Travis Kovar</span>
+              <span style={{ color: 'var(--text-primary)' }}>{PERSON_DATA.name}</span>
               <br />
               <span className="gradient-text">AI Driven Technical</span>
               <br />
@@ -277,53 +277,37 @@ export default function HomePage() {
 
             {/* Education & Certs */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '40px' }}>
-              <div
-                style={{
-                  padding: '16px 24px',
-                  borderRadius: '12px',
-                  background: 'rgba(59, 130, 246, 0.05)',
-                  border: '1px solid rgba(59, 130, 246, 0.2)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  flexWrap: 'wrap',
-                }}
-              >
-                <span style={{ fontSize: '24px' }}></span>
-                <div>
-                  <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
-                    B.S. Computer Science
+              {PERSON_DATA.education.map((edu) => {
+                const isCompleted = edu.status === 'Completed';
+                return (
+                  <div
+                    key={edu.degree}
+                    style={{
+                      padding: '16px 24px',
+                      borderRadius: '12px',
+                      background: isCompleted ? 'rgba(59, 130, 246, 0.05)' : 'rgba(245, 158, 11, 0.05)',
+                      border: isCompleted ? '1px solid rgba(59, 130, 246, 0.2)' : '1px solid rgba(245, 158, 11, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '16px',
+                      flexWrap: 'wrap' as const,
+                    }}
+                  >
+                    <div>
+                      <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
+                        {edu.degree}
+                      </div>
+                      <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
+                        {edu.institution}
+                      </div>
+                    </div>
+                    {isCompleted
+                      ? <span className="badge" style={{ marginLeft: 'auto', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', border: '1px solid rgba(59, 130, 246, 0.2)' }}>Completed</span>
+                      : <span className="badge badge-orange" style={{ marginLeft: 'auto' }}>In Progress</span>
+                    }
                   </div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
-                    Texas State University
-                  </div>
-                </div>
-                <span className="badge" style={{ marginLeft: 'auto', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', border: '1px solid rgba(59, 130, 246, 0.2)' }}>Completed</span>
-              </div>
-
-              <div
-                style={{
-                  padding: '16px 24px',
-                  borderRadius: '12px',
-                  background: 'rgba(245, 158, 11, 0.05)',
-                  border: '1px solid rgba(245, 158, 11, 0.2)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  flexWrap: 'wrap',
-                }}
-              >
-                <span style={{ fontSize: '24px' }}></span>
-                <div>
-                  <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '14px' }}>
-                    AWS Certified Generative AI Practitioner
-                  </div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '13px', marginTop: '2px' }}>
-                    Amazon Web Services
-                  </div>
-                </div>
-                <span className="badge badge-orange" style={{ marginLeft: 'auto' }}>In Progress</span>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>

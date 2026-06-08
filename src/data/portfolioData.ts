@@ -1,6 +1,19 @@
 import type { TimelineEntry } from '@/components/Timeline';
 import type { SkillCategory } from '@/components/TechStackVisualizer';
 
+export const PERSON_DATA = {
+  name: 'Travis Kovar',
+  headline: 'Tech Lead | AI Driven Technical Leadership',
+  email: 'travis@example.com',
+  linkedin: 'linkedin.com/in/traviskovar',
+  github: 'github.com/traviskovar',
+  summary: 'Tech Lead with 8+ years of experience building scalable enterprise software. Architected and delivered a live production AI agent at ALSAC — passionate about AI-native development, team empowerment, and driving technical vision.',
+  education: [
+    { degree: 'B.S. Computer Science', institution: 'Texas State University', status: 'Completed' as const },
+    { degree: 'AWS Certified Generative AI Practitioner', institution: 'Amazon Web Services', status: 'In Progress' as const },
+  ],
+};
+
 export const TIMELINE_DATA: TimelineEntry[] = [
   {
     id: 'rad-tech-lead',

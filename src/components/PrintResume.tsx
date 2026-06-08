@@ -1,25 +1,23 @@
-import { TIMELINE_DATA, SKILLS_DATA } from '@/data/portfolioData';
+import { TIMELINE_DATA, SKILLS_DATA, PERSON_DATA } from '@/data/portfolioData';
 
 export default function PrintResume() {
   return (
     <div className="print-resume" style={{ padding: '0', color: '#000', fontFamily: 'Arial, sans-serif', fontSize: '10pt', lineHeight: 1.4 }}>
       {/* HEADER */}
       <div style={{ textAlign: 'center', marginBottom: '16px' }}>
-        <h1 style={{ fontSize: '24pt', fontWeight: 'bold', margin: '0 0 4px 0' }}>Travis Kovar</h1>
+        <h1 style={{ fontSize: '24pt', fontWeight: 'bold', margin: '0 0 4px 0' }}>{PERSON_DATA.name}</h1>
         <div style={{ fontSize: '11pt', color: '#333' }}>
-          Tech Lead | AI Driven Technical Leadership
+          {PERSON_DATA.headline}
         </div>
         <div style={{ fontSize: '10pt', marginTop: '4px' }}>
-          travis@example.com • linkedin.com/in/traviskovar • github.com/traviskovar
+          {PERSON_DATA.email} • {PERSON_DATA.linkedin} • {PERSON_DATA.github}
         </div>
       </div>
 
       {/* SUMMARY */}
       <div style={{ marginBottom: '16px' }}>
         <h2 style={{ fontSize: '12pt', borderBottom: '1px solid #000', margin: '0 0 8px 0', paddingBottom: '2px', textTransform: 'uppercase' }}>Professional Summary</h2>
-        <p style={{ margin: 0 }}>
-          Tech Lead with 8+ years of experience building scalable enterprise software. Architected and delivered a live production AI agent at ALSAC and passionate about AI-native development, team empowerment, and driving technical vision.
-        </p>
+        <p style={{ margin: 0 }}>{PERSON_DATA.summary}</p>
       </div>
 
       {/* SKILLS */}
@@ -67,12 +65,12 @@ export default function PrintResume() {
       {/* EDUCATION & CERTIFICATIONS */}
       <div>
         <h2 style={{ fontSize: '12pt', borderBottom: '1px solid #000', margin: '0 0 8px 0', paddingBottom: '2px', textTransform: 'uppercase' }}>Education & Certifications</h2>
-        <div style={{ marginBottom: '4px' }}>
-          <strong>B.S. Computer Science</strong> — Texas State University
-        </div>
-        <div>
-          <strong>AWS Certified Generative AI Practitioner</strong> — Amazon Web Services (In Progress)
-        </div>
+        {PERSON_DATA.education.map((edu, i) => (
+          <div key={i} style={{ marginBottom: i < PERSON_DATA.education.length - 1 ? '4px' : 0 }}>
+            <strong>{edu.degree}</strong> — {edu.institution}
+            {edu.status === 'In Progress' && <span style={{ fontStyle: 'italic' }}> (In Progress)</span>}
+          </div>
+        ))}
       </div>
     </div>
   );
